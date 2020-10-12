@@ -12,8 +12,57 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
  passwordText.value = password;
+ for (var i = 0; i < specialChar.length; i++) {
+  var todo = todos[i];
 }
-passoword(document.textContent)
+password(document.textContent)
+
+
+/*Password Length prompt*/
+var plength = prompt("How long would you like your password to be?")
+
+/*Restriction for password length through alert*/
+if (plength < 8 || plenght > 128){
+  alert("Length must be 8 to 128 characters.")
+}
+/*Confirms for characters to be used*/
+if(plength >= 8 && plenght <= 128){
+  var cUpp = confirm("Would you like to use upper case letters?") 
+  var cLow = confirm("Would you like to use lower case letters?")
+  var cNum = confirm("Would you like to use numbers?")
+  var cSym = confirm("Would you like to use symbols?")
+}
+/*Statement for a requirement of at least one confirm for password characters*/
+if(cUpp !== true && cLow !== true && cNum !== true && cSym !== true){
+  alert("You must select at least one character!")
+}
+/*Random math functions for each character type*/
+function getRandomLower(){
+  return String.fromCharCode(Math.floor(Math.random()));
+}
+
+function getRandomUpper(){
+  return String.fromCharCode(Math.floor(Math.random()));
+}
+
+function getRandomNumeric(){
+  String.fromCharCode(Math.floor(Math.random()));
+}
+function getRandomSymbol(){
+  String.fromCharCode(Math.floor)(Math.random());
+}
+
+const randomFunc = {
+  lower: getRandomLower,
+  upper: getRandomUpper,
+  numeric: getRandomNumeric,
+  symbol: getRandomSymbol
+}
+
+
+ 
+
+
 
 
 
