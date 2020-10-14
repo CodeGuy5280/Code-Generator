@@ -25,16 +25,26 @@ function generatePassword() {
   //console.log(plength)
 
 //vars w/ prompts for char selection through user input
-  var cUpp = confirm("Would you like to use upper case letters?") 
-  var cLow = confirm("Would you like to use lower case letters?")
-  var cNum = confirm("Would you like to use numbers?")
-  var cSym = confirm("Would you like to use symbols?")
+  var letterUp = confirm("Would you like to use upper case letters?") 
+  var letterLow= confirm("Would you like to use lower case letters?")
+  var numbers = confirm("Would you like to use numbers?")
+  var specialChar = confirm("Would you like to use symbols?")
   //console.log(cUpp)
 
-  for (var i = 0; i <= length; i++){
-      var randomChar = userChoice[Math.floor(Math.random()* userChoice.length)]
-      console.log(Math.floor(Math.random() * 128));  
+  if (parsseInt([length]) >=8 && parseInt([length] <=128))
+      if (letterLow) userChoice = userChoice.concat();
+      if (letterUp) userChoice = userChoice.concat();
+
+
+     var userChoice = {
+       confirmStrlength: confirmStrlength,
+       confirmspecialChar: confirmspecialChar,
+       confirmnumbers: confirmnumbers,
+       confirmletterUp: confirmletterUp,
+       conrimletterLow: confirmletterLow
      }
+
+     var userChoice = [];
   //alert will show if no confirm is chosen as true by the user.
   // if (letterLow === false &&
   //     letterUp === false &&
@@ -50,7 +60,16 @@ function generatePassword() {
 
   return passwordFinal
 }
+//Function to write password
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector('#password');
 
+  passwordText.value = password;
+}
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
 // Write password to the #password input
 // function writePassword() {
 //   var password = generatePassword();
@@ -131,12 +150,12 @@ function generatePassword() {
 // }
 
 
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector('#password');
+// function writePassword() {
+//   var password = generatePassword();
+//   var passwordText = document.querySelector('#password');
 
-  passwordText.value = password;
-}
+//   passwordText.value = password;
+// }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+// // Add event listener to generate button
+// generateBtn.addEventListener("click", writePassword);
