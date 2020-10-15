@@ -18,24 +18,36 @@ concatination, confirm do you want to use each type of characters individually*/
 
 //Function to generate password with codeblock to run the full program
 function generatePassword() {
-  var passwordFinal = []
+  var passwordFinal = [i]
   
-//password length var w/ prompt to initiate user input.
-  var plength = prompt("How long would you like your password to be?")
+//password length var w/ prompt to initiate initial user input.
+  var plength = parseInt(prompt("How long would you like your password to be?"))
   //console.log(plength)
 
-//vars w/ prompts for char selection through user input
-  var letterUp = confirm("Would you like to use upper case letters?") 
-  var letterLow= confirm("Would you like to use lower case letters?")
-  var numbers = confirm("Would you like to use numbers?")
-  var specialChar = confirm("Would you like to use symbols?")
+  //requirement of password length
+  if (plength < 8 || length > 128) {
+    alert("Password length is between 8 and 128.")
+  }
+ //vars w/ prompts for char selection through user input
+  function passwordChoice(){
+    var plength = prompt ("Please enter 8 to 128 characters.")
+    var letterUp = confirm("Would you like to use upper case letters?") 
+    var letterLow= confirm("Would you like to use lower case letters?")
+    var numbers = confirm("Would you like to use numbers?")
+    var specialChar = confirm("Would you like to use symbols?")
+    
+  }
+  
   //console.log(cUpp)
+  // if (NaN(passwordChoice)|| passwordChoice < 8 || passwordChoice > 128)
 
-  if (parsseInt([length]) >=8 && parseInt([length] <=128))
-      if (letterLow) userChoice = userChoice.concat();
-      if (letterUp) userChoice = userChoice.concat();
+  if (parseInt([Array.length]) >= 8 && parseInt([Array.length] <= 128))
+      if (letterLow) userChoice = userChoice.concat(letterLow);
+      if (letterUp) userChoice = userChoice.concat(letterUp);
+      if (numbers) userChoice = userChoice.concat(numbers);
+      if (specialChar) userChoice = userChoice.concat(specialChar);
 
-
+      
      var userChoice = {
        confirmStrlength: confirmStrlength,
        confirmspecialChar: confirmspecialChar,
@@ -43,33 +55,72 @@ function generatePassword() {
        confirmletterUp: confirmletterUp,
        conrimletterLow: confirmletterLow
      }
+    
 
-     var userChoice = [];
+     for (var i = 0; i < parseInt(Array.length); i++){
+       var rVar = math.floor(math.random() * userChoice.length);
+       var charRand = userChoice[random];
+     }
+     var userChoice = [i];
   //alert will show if no confirm is chosen as true by the user.
-  // if (letterLow === false &&
-  //     letterUp === false &&
-  //     numbers === false &&
-  //     specialChar === false){
-  //     alert("Please enter a valid character.")
-      
+  if (letterLow == false &&
+      letterUp == false &&
+      numbers == false &&
+      specialChar == false){
+      alert("Please enter a valid character.")
+      }
   // based off of prompts concat arrays
-
+  if (userChoice.confirmletterUp === true) {
+    randomCharacters=randomCharacters.concat(uppercase)
+      chosenRandomPassword.push(randomFunctions(uppercase));
+    };
+  if (userChoice.confirmletterLow === true) {
+    randomCharacters=randomCharacters.concat(lowercase)
+     chosenRandomPassword.push(randomFunctions(lowercase));
+  };
+  if (userChoice.confirmnumbers === true) {
+    randomCharacters=randomCharacters.concat(numbers)
+      chosenRandomPassword.push(randomFunctions(numbers));
+    };
+  if (userChoice.confirmspecialChar === true) {
+    randomCharacters=randomCharacters.concat(Symbols)
+   chosenRandomPassword.push(randomFunctions(Symbols));
+};
+  for (let i = 0; i < passwordOptions.length; i++) {
+     var randomCharacters = randomFunctions(randomOptions)
+     result = passwordOptions[i]
+  };
+  for (let i = 0; i < randomFunctions.length; i++) {
+    result = randomFunctions[i]
+  };
 
   //based off the users request of length
   //randomize a selection from that giant array
 
-  return passwordFinal
+  return passwordFinal = [i]
 }
 //Function to write password
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector('#password');
-
   passwordText.value = password;
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Write password to the #password input
 // function writePassword() {
 //   var password = generatePassword();
