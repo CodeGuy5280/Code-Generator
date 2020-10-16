@@ -1,8 +1,7 @@
 # Random-Password-Generator
 
 ## This task is to create a random password generator.
-  Creating a random password generator using javascript. 
-  
+
 ### Pseudo Code:
 
 -randomChar generator of the arrays,
