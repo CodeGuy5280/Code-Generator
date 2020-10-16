@@ -1,11 +1,14 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+//vars of arrays to be added to the password if the user chooses to do so.
 var specialChar = ["!@#$%^&*()_+="]
 var letterLow = ["abcdefghijklmnopqrstuvwxyz"]
 var letterUp = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"] 
 var numbers = ["0123456789"]
 var allArray = [];
+//var rPass = something with string and math.floor & math.random * (something?); 
+//var rPass is for random password calculation at some point in code. Near bottom?
 
 
 
@@ -30,6 +33,7 @@ function generatePassword(){
       var cNumbers = confirm("Would you like to use numbers?");
       var cSpecial = confirm("Would you like to use special characters?");
       //console.log(cLower)
+      //console.log(cUpper)
 
       
       
@@ -67,10 +71,22 @@ function generatePassword(){
        if (cLower == false && cUpper == false && cNumbers == false && cSpecial == false){
         alert("Please select at least one character to use.");
       }
+      //changing the specialChar var catS to a string to concat correctly.
+      var catString = catS.toString();
+      //assigning the var stringofcatS to an empty string for values to be placed.
+      var stringofcatS = "";
+
+      //for loop to iterate through and select characters based off user input to length of password.
+      for(i=0; i < pLength; i++){
+        var rPass = catSString.charAt(Math.floor(Math.random()) * catSString.length);
+        var output = rPass.concat(stringofcatS);
+        
+      }
+      return stringofcatS;
+    
 
 
 
-      
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
