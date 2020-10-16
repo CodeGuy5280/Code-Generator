@@ -40,32 +40,38 @@ function generatePassword() {
        
        //if statments for concatination of strings in arrays.
  
+
+        //numbers if concat statement
+        if (cNumbers === true){
+          var catN = allArray.concat(numbers);
+            }
+            else{
+          var catN = allArray.concat();
+        }
+
        //lowercase if concat statement
        if (cLower === true){
-         var catL = allArray.concat(letterLow);
-       }else{
-         var catL = allArray.concat();
+         var catL = catN.concat(letterLow);
+          }
+          else{
+         var catL = catN.concat();
        }
  
        //uppercase if concat statement
        if (cUpper === true){
-         var catU = allArray.concat(letterUp);
-       }else{
-         var catU = allArray.concat();
+         var catU = catL.concat(letterUp);
+          }
+          else{
+         var catU = catL.concat();
        }
  
-       //numbers if concat statement
-       if (cNumbers === true){
-         var catN = allArray.concat(numbers);
-       }else{
-         var catN = allArray.concat();
-       }
  
        //specialChar if concat statement
        if (cSpecial === true){
-         var catS = allArray.concat(specialChar)
-       }else{
-         var catS = allArray.concat();
+         var catS = (catS= catU.concat(specialChar))
+          }
+          else{
+         var catS = (catS= catU.concat());
        }
  
         //if statment to make sure a selection is made.
@@ -73,23 +79,24 @@ function generatePassword() {
        // //   alert("Please select at least one character to use.");
        // // }
        //going to try a different if statement, I don't know believe this is working.
- 
-       if (cLower !== true && cUpper !== true && cNumbers !== true && cSpecial !== true){
- 
+       //do not use !== instead use !=
+
+       if (cLower != true && cUpper != true && cNumbers != true && cSpecial != true){
+        alert("Must select at least one character to use.")}
        //changing the specialChar var catS to a string to concat correctly.
        var catString = catS.toString();
-       //assigning the var stringofcatS to an empty string for values to be placed.
+       //this is to  assign the var stringofcatS to an empty string for values to be placed within.
        var stringofcatS = "";
  
        //for loop to iterate through and select characters based off user input to length of password.
        //using math.floor and math.random w/ creation of 2 vars. return after to end code.
        for(i = 0; i < pLength; i++){
-         var rPass = catSString.charAt(Math.floor(Math.random()) * catSString.length);
-         var output = rPass.concat(stringofcatS);
+         var rPass = catString.charAt(Math.floor(Math.random() * catString.length));
+         var stringofcatS = rPass.concat(stringofcatS);
          
        }
         return stringofcatS;
-      }
+       
 }
  
  // Write password to the #password input
