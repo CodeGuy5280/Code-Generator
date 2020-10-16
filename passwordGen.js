@@ -2,14 +2,14 @@
 var generateBtn = document.querySelector("#generate");
 
 //vars of arrays to be added to the password if the user chooses to do so.
-var specialChar = ["!@#$%^&*()_+="]
-var letterLow = ["abcdefghijklmnopqrstuvwxyz"]
-var letterUp = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"] 
-var numbers = ["0123456789"]
+var specialChar = "!@#$%^&*()_+="
+var letterLow = "abcdefghijklmnopqrstuvwxyz"
+var letterUp = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+var numbers = "0123456789"
 var allArray = [];
 //var rPass = something with string and math.floor & math.random * (something?); 
 //var rPass is for random password calculation at some point in code. Near bottom?
-
+//figure out how to use parseInt with prompts||confirms.
 
 
 
@@ -19,13 +19,14 @@ function generatePassword(){
    //console.log(password)
 
   var pLength = parseInt(prompt("How many characters would you like your password to be?"));
-  // console.log(passLength)
+  // console.log(pLength)
 
   //if statement for required password length parameters.
   if (pLength < 8 || pLength > 128 || isNaN(pLength)) {
     alert("Password must be 8 to 128 characters.");}
-    return "";
-  }
+
+    // // return "";
+  
 
   //vars w/ confirms for type of characters to use in the password.
       var cLower = confirm("Would you like to use lower case letters?");
@@ -77,15 +78,14 @@ function generatePassword(){
       var stringofcatS = "";
 
       //for loop to iterate through and select characters based off user input to length of password.
-      for(i=0; i < pLength; i++){
+      //using math.floor and math.random w/ creation of 2 vars. return after to end code.
+      for(i = 0; i < pLength; i++){
         var rPass = catSString.charAt(Math.floor(Math.random()) * catSString.length);
         var output = rPass.concat(stringofcatS);
         
       }
-      return stringofcatS;
+       return stringofcatS;
 }
-
-
 
 // Write password to the #password input
 function writePassword() {
@@ -94,7 +94,7 @@ function writePassword() {
   passwordText.value = password;
   //console.log(passwordText)
   //console.log(password)
-}
+}console.log(generatePassword)
 
   
 
