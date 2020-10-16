@@ -5,7 +5,7 @@
 ### Pseudo Code:
 
 -randomChar generator of the arrays,
--create function for generate password promps and confirms,
+-create function for generate password prompts and confirms,
 -go through truthee/falsee statements for questions,
 -you have to parse int use && + char length to concatinate strings. .concat can be used
 -add event listeners for the buton,
