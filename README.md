@@ -20,3 +20,13 @@
 ### Link to webpage:
 
 https://codeguy5280.github.io/Password-Generator/
+
+
+#### References for future use:
+
+Concatination of Strings/String concat() Method
+https://www.w3schools.com/jsref/jsref_concat_string.asp
+
+String.prototype.concat()
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat
+
