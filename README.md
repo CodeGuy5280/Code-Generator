@@ -2,6 +2,12 @@
 
 ## This task is to create a random password generator.
 
+The code uses javascript to add functionality. 
+Parameters set by var, if/else statments and for loops to run through
+functions by clicking a button to create a random password. 
+Prompts in the code allow the user to define what type of characters to 
+include in their final generated password.
+
 ### Pseudo Code:
 
 -randomChar generator of the arrays,
