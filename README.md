@@ -25,4 +25,4 @@ include in their final generated password.
 
 ### Link to webpage:
 
-https://codeguy5280.github.io/Password-Generator/
+https://codeguy5280.github.io/PasswordGenerator/
